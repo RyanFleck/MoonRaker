@@ -3,10 +3,15 @@
 MoonRaker
 =========
 
-Rakes a HN page, returns sets of hiring information. My first go program.
+Rakes a HN page, returns sets of hiring information.
+
+image::moonraker_small.png[]
+
+My first go program.
 
 [source,sh]
 go get github.com/PuerkitoBio/goquery
+
 
 .Resources:
 - https://manuel.kiessling.net/2012/09/28/applying-the-clean-architecture-to-go-applications/[Clean Go applications] https://github.com/ManuelKiessling/go-cleanarchitecture[(example)]

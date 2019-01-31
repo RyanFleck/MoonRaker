@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"logging"
-	"time"
+	"logger"
 )
 
 func main() {
-	fmt.Println("Welcome to the playground!")
-	logging.Log("Test")
-	fmt.Println("The time is", time.Now())
+
+	logger.Log("Test")
+	logger.Err("Aaaaa!")
+	logger.Log("This should not print.")
+
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fetch"
 	"logger"
 )
 
@@ -9,8 +10,8 @@ func main() {
 	l := logger.Logger{
 		Name: "Main",
 	}
-	l.Log("Test")
-	l.Err("Aaaaa!")
-	l.Log("This should not print.")
+
+	l.Log("Copyright (c) 2019 Ryan Fleck")
+	fetch.Test()
 
 }

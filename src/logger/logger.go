@@ -5,15 +5,29 @@ import (
 	"os"
 )
 
+/*
+ *	Static logging methods are used by smaller independent methods.
+ */
+
 // Log prints a formatted log string to the console.
-func Log(msg string) {
-	symlog("---", "general", msg)
+func Log(id string, msg string) {
+	symlog("---", id, msg)
+}
+
+// Init indicates instantiation.
+func Init(id string, msg string) {
+	symlog("-->", id, msg)
 }
 
 // Err prints a formatted error message to the console.
-func Err(msg string) {
-	symerr("!!!", "general", msg)
+func Err(id string, msg string) {
+	symerr("!!!", id, msg)
 }
+
+/*
+ *	Packages instantiate a logger at the beginning, so errors and messages
+ *   can be traced to a point of failure.
+ */
 
 // Logger should be instantiated for every file. Exposes logging methods.
 type Logger struct {
@@ -56,5 +70,6 @@ func symlog(sym string, pkg string, msg string) {
 
 func symerr(sym string, pkg string, err string) {
 	fmt.Fprintf(os.Stderr, "%s %s ->\t%s\n", sym, pkg, err)
+	fmt.Fprintf(os.Stderr, "%s %s ->\tExiting program. (1)\n", sym, pkg)
 	os.Exit(1)
 }

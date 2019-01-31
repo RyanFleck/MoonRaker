@@ -1,16 +1,14 @@
-// README.ascii
+// README.ascii - Ryan Fleck 2019
 
 MoonRaker
 =========
 
-Rakes a webpage, returns sets of hiring information.
+My first go program! Rakes a webpage, returns sets of hiring information.
 
 .Resources:
 - https://manuel.kiessling.net/2012/09/28/applying-the-clean-architecture-to-go-applications/[Clean Go applications]https://github.com/ManuelKiessling/go-cleanarchitecture[(example)]
 - https://gobyexample.com/string-formatting[String formatting in Go]
+- https://golangbot.com/structs-instead-of-classes/[Using structs instead of classes]
 - https://www.devdungeon.com/content/web-scraping-go[Web scraping in Go]
 - https://github.com/powerman/asciidoc-cheatsheet[Asciidoc cheatsheet]
 
-.To build, add this repo to GOPATH:
-[source,sh]
-export GOPATH=$GOPATH:`pwd`

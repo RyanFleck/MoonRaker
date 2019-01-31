@@ -6,8 +6,11 @@ import (
 
 func main() {
 
-	logger.Log("Test")
-	logger.Err("Aaaaa!")
-	logger.Log("This should not print.")
+	l := logger.Logger{
+		Name: "Main",
+	}
+	l.Log("Test")
+	l.Err("Aaaaa!")
+	l.Log("This should not print.")
 
 }
